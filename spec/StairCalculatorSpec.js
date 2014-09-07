@@ -37,4 +37,12 @@ describe("Stair Calculator", function() {
     expect(result.stepRun).toBe(28.28);
   });
 
+  it("get total length", function() {
+    var input = { stepRise: 18, heigh: 250 };
+
+    var result = calculator.calculate(input);
+    
+    expect(result.length).toBe(367.64);
+  });
+
 });

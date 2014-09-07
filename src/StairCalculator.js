@@ -15,6 +15,7 @@ window.StairCalculator = window.StairCalculator || {};
 			result.steps = result.stepRisers - 1;
 			result.stepRise = roundToTwoDecimals(input.heigh / result.stepRisers);
 			result.stepRun = roundToTwoDecimals(64 - (2 * result.stepRise));
+			result.length = result.steps * result.stepRun;
 			
 			return result;
 		};
