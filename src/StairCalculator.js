@@ -9,6 +9,12 @@ window.StairCalculator = window.StairCalculator || {};
 			return Math.round(number * Math.pow(10,2)) / Math.pow(10,2);
 		};
 
+		var getAngle = function(stepRise, stepRun){
+			var tanX = stepRise / stepRun;
+			var atanX = Math.atan(tanX);
+			return atanX * 180 / Math.PI;
+		};
+
 		calculator.calculate = function(input){
 			var result = {};
 			result.stepRisers = Math.ceil(input.heigh / input.stepRise);
@@ -16,7 +22,7 @@ window.StairCalculator = window.StairCalculator || {};
 			result.stepRise = roundToTwoDecimals(input.heigh / result.stepRisers);
 			result.stepRun = roundToTwoDecimals(64 - (2 * result.stepRise));
 			result.length = result.steps * result.stepRun;
-			
+			result.angle = roundToTwoDecimals(getAngle(result.stepRise, result.stepRun));
 			return result;
 		};
 

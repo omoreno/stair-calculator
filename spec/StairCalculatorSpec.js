@@ -45,4 +45,12 @@ describe("Stair Calculator", function() {
     expect(result.length).toBe(367.64);
   });
 
+  it("get angle", function() {
+    var input = { stepRise: 18, heigh: 250 };
+
+    var result = calculator.calculate(input);
+    
+    expect(result.angle).toBe(32.27);
+  });
+
 });
