@@ -13,6 +13,14 @@ describe("Stair Calculator", function() {
     expect(result.stepRises).toBe(14);
   });
 
+  it("number of steps should be one less than step rises", function() {
+    var input = { stepRise: 18, heigh: 250 };
+
+    var result = calculator.calculate(input);
+    
+    expect(result.steps).toBe(13);
+  });
+
   it("rounds to two decimal the step rise", function() {
     var input = { stepRise: 18, heigh: 250 };
 
