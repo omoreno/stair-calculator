@@ -4,9 +4,17 @@ window.StairCalculator = window.StairCalculator || {};
 	
 	function Calculator() {
 		var calculator = {};
+
+		var roundToTwoDecimals = function(number){
+			return Math.round(number * Math.pow(10,2)) / Math.pow(10,2);
+		};
+
 		calculator.calculate = function(input){
 			var result = {};
 			result.steps = Math.ceil(input.heigh / input.stepRise);
+			result.stepRise = roundToTwoDecimals(input.heigh / result.steps);
+
+			
 			return result;
 		};
 
