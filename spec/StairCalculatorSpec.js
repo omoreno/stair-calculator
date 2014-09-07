@@ -21,4 +21,12 @@ describe("Stair Calculator", function() {
     expect(result.stepRise).toBe(17.86);
   });
 
+  it("rounds to two decimal the step run", function() {
+    var input = { stepRise: 18, heigh: 250 };
+
+    var result = calculator.calculate(input);
+    
+    expect(result.stepRun).toBe(28.28);
+  });
+
 });
