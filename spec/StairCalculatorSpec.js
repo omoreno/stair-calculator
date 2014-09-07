@@ -10,7 +10,7 @@ describe("Stair Calculator", function() {
 
     var result = calculator.calculate(input);
     
-    expect(result.stepRises).toBe(14);
+    expect(result.stepRisers).toBe(14);
   });
 
   it("number of steps should be one less than step rises", function() {
