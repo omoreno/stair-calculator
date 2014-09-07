@@ -5,12 +5,12 @@ describe("Stair Calculator", function() {
     calculator = StairCalculator.Factory.Calculator();
   });
 
-  it("rounds to next step rise on steps calculation", function() {
+  it("rounds to next step rise on step rises calculation", function() {
     var input = { stepRise: 18, heigh: 250 };
 
     var result = calculator.calculate(input);
     
-    expect(result.steps).toBe(14);
+    expect(result.stepRises).toBe(14);
   });
 
   it("rounds to two decimal the step rise", function() {

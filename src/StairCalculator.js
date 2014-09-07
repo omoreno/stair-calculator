@@ -11,8 +11,8 @@ window.StairCalculator = window.StairCalculator || {};
 
 		calculator.calculate = function(input){
 			var result = {};
-			result.steps = Math.ceil(input.heigh / input.stepRise);
-			result.stepRise = roundToTwoDecimals(input.heigh / result.steps);
+			result.stepRises = Math.ceil(input.heigh / input.stepRise);
+			result.stepRise = roundToTwoDecimals(input.heigh / result.stepRises);
 			result.stepRun = roundToTwoDecimals(64 - (2 * result.stepRise));
 			
 			return result;
