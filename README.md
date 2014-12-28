@@ -1,3 +1,3 @@
 # Stair Calculator #
 
-This is a simple calculator to get the measures to build a basic stair.
+A basic app for calculating stairs parameters such as rise, run and length.
